@@ -61,9 +61,9 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" max-w-2xl py-16 sm:py-24 lg:py-32 lg:max-w-none">
             {/*  */}
-            <div className="">
-              <div className="text-left block md:flex">
-                <h2 className="text-red-500 title tracking-tighter leading-relaxed sm:leading-none ">
+            <div className="my-4">
+              <div className="text-left flex">
+                <h2 className="text-red-500 title tracking-tighter    ">
                   DỰ ÁN &nbsp;
                 </h2>
 
@@ -71,7 +71,7 @@ const Projects = () => {
                   CỦA CHÚNG TÔI
                 </h2>
               </div>
-              <div className="  border-b-4 border-red-500 w-full md:border-b-8 md:w-[256px] py-4"></div>
+              <div className="  border-b-4 border-red-500 w-[200px] md:border-b-8 md:w-[256px] py-2"></div>
             </div>
             {/*  */}
 

@@ -9,8 +9,8 @@ import Footer from '../components/Footer';
 import Blogs from '../components/Blogs';
 import Testimonial from '../components/Testimonial';
 import ContactUs from '../components/ContactUs';
-import CustomerLogo from '../components/CustomerLogo'
-
+import CustomerLogo from '../components/CustomerLogo';
+import Team from '../components/Team';
 
 export default function Home() {
   return (
@@ -22,14 +22,15 @@ export default function Home() {
         {/* Customer Logos */}
         <CustomerLogo/>
         {/* Our Projects */}
-        <Projects/>
+        <NewProject/>
         
         {/* WORK -CHUNG TOI LAM GI */}
         <Works />
         {/* Linh Vuc Cua Chung Toi */}
         <Fields />
         {/* Our Branch Members Đội Ngũ Của Chúng Tôi */}
-        <TeamBranches />
+        
+        <Team/>
         {/* Testimonial section */}
         <Testimonial/>
         {/* Blog section - Tin Tức Nổi Bật */}

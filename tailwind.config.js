@@ -21,7 +21,7 @@ module.exports = {
    
     extend: {
       fontFamily:{
-        Alegreya: ['Alegreya SC','"Barlow condensed"', 'san-serif'],
+        Anton: ['Anton','san-serif'],
         Inter: ['Inter']
 
       },
@@ -29,10 +29,10 @@ module.exports = {
         primary:'#16405B'
       }, 
       borderRadius:{
-        'eclipse': '1000px 1000px 0px 0px / 300px 300px;'
+        'eclipse': '2000px 2000px 0px 0px / 400px 400px;'
       },
       boxShadow: {
-        'biginner': 'inset 0 8px 8px 0 rgb(0 0 0 / 0.05);',
+        'biginner': 'inset 0 20px 16px 0 rgb(0 0 0 / 0.05);',
       },
     },
   },

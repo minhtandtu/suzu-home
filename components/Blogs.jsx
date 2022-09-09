@@ -66,23 +66,25 @@ const Blogs = () => {
         <div className="relative">
           <div className="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
             {/* Canh giữa */}
-            <div className="  w-full">
-              <div className="   md:flex md:w-[450px] text-left md:mx-auto ">
-                <h2 className="text-red-500 title tracking-tighter leading-relaxed sm:leading-none ">
-                  TIN TỨC &nbsp;
+            {/* TIN TỨC NỔI BẬT */}
+            <div className="mx-3  md:mx-16 mb-6 md:mb-14  ">
+              <div className="text-center flex justify-start md:justify-center">
+                <h2 className="text-red-500 title  sm:leading-none ">
+                  TIN TỨC&nbsp;
                 </h2>
-                <h2 className="text-white text-stroke text-stroke-red title  ">
+
+                <h2 className=" text-white text-stroke text-stroke-red title  ">
                   NỔI BẬT
                 </h2>
               </div>
-              <div className="  border-b-4 border-red-500 w-[150px] md:border-b-8 md:w-[256px] py-4 md:mx-auto"></div>
+              <div className="md:mx-auto  border-b-4 border-red-500 w-[35%] md:border-b-8 md:w-[160px] py-2 md:py-4"></div>
             </div>
             {/*  */}
           </div>
           <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post, index) => (
               <div
-                key={post.id}
+                key={index}
                 className="flex flex-col rounded-lg shadow-lg overflow-hidden"
               >
                 <div className="flex-shrink-0">
@@ -136,9 +138,9 @@ const Blogs = () => {
             ))}
           </div>
           {/* XEM THÊM --> */}
-          <div className="w-full text-center  mt-8">
+          <div className=" w-full  flex justify-center">
             <button
-              className="border border-red-400 py-2 px-7 rounded-md bg-red-400 text-white font-bold
+              className=" w-full  md:w-auto border border-red-500 py-2 m-3 px-7 rounded-md bg-red-500 text-white font-bold
              hover:bg-red-700 duration-500 "
             >
               XEM THÊM &rarr;

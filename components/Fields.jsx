@@ -68,30 +68,25 @@ const Fields = () => {
         className="section px-4  sm:pt-32 sm:px-6 lg:max-w-full lg:px-8"
       >
         {/* Canh giữa */}
-        <div className="  w-full">
-          <div className="   md:flex md:w-[600px] text-left md:mx-auto ">
-            <h2 className="text-red-500 title tracking-tighter leading-relaxed sm:leading-none ">
-              LĨNH VỰC &nbsp;
+        {/* Lĩnh vực hoạt động  */}
+        <div className="mx-3  md:mx-16 mb-6 md:mb-14  ">
+          <div className="text-center flex justify-start md:justify-center">
+            <h2 className="text-red-500 title  sm:leading-none ">
+              LĨNH VỰC&nbsp;
             </h2>
+
             <h2 className=" text-white text-stroke text-stroke-red title  ">
               HOẠT ĐỘNG
             </h2>
           </div>
-          <div className="  border-b-4 border-red-500 w-[150px] md:border-b-8 md:w-[256px] py-4 md:mx-auto"></div>
+          <div className="md:mx-auto  border-b-4 border-red-500 w-[35%] md:border-b-8 md:w-[160px] py-2 md:py-4"></div>
         </div>
         {/*  */}
-        <p className="mt-4 text-base text-gray-500">
-          Each season, we collaborate with world-class designers to create a
-          collection inspired by the natural world.
-        </p>
+        {/*  */}
 
         <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-          {linhvuc.map((collection) => (
-            <a
-              key={collection.name}
-              href={collection.href}
-              className="group block"
-            >
+          {linhvuc.map((collection, index) => (
+            <a key={index} href={collection.href} className="group block">
               <div
                 aria-hidden="true"
                 className=" aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 px-4 md:px-4 lg:aspect-w-5 lg:aspect-h-6 xl:px-16"

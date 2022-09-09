@@ -100,73 +100,13 @@ function classNames(...classes) {
 const TeamBranches = () => {
   return (
     <>
-      <div className="section bg-white text-left ">
-        <div className="mx-auto m-16   ">
-          {/*  */}
-          <div className="ml-4 md:ml-16">
-            <div className="text-left block md:flex">
-              <h2 className="text-red-500 title leading-relaxed md:leading-none ">
-                ĐỘI NGŨ &nbsp;
-              </h2>
-
-              <h2 className="text-white text-stroke text-stroke-red title  ">
-                CỦA CHÚNG TÔI
-              </h2>
-            </div>
-            <div className="  border-b-4 border-red-500 w-full md:border-b-8 md:w-[256px] py-4"></div>
+      <div className="section h-96 text-left bg-red-100 bg-opacity-50 ">
+        <div className="box-container w-[50%] mx-auto   ">
+          <div className="text p-10 bd bg-yellow-100 bg-opacity-50">
+            <h2 className="  "> BOX 1</h2>
           </div>
-          {/*  */}
-
-          <div className="grid grid-cols-1 md:grid-cols-5">
-            <div className="col-span-2   m-4 md:ml-12 xl:ml-24 md:min-w-[300px]">
-              <nav className="space-y-1" aria-label="Sidebar">
-                {branchName.map((item) => (
-                  <a
-                    key={item.name}
-                    className="cursor-pointer font-semibold  hover:text-red-500  "
-                  >
-                    <div className=" w-full border border-dashed  md: h-24 xl:h-28 2xl:h-36 flex  hover:underline ">
-                      <div className="h-full w-[60%]  m-1">
-                        <div className=" w-full h-[50%] m-1 relative ">
-                          <h3 className="absolute bottom-1 left-0 text-xl sm:text-2xl ">
-                            {item.name}
-                          </h3>
-                        </div>
-                        <div className="  w-full h-[50%] m-1 ">
-                          <p>{item.des}</p>
-                        </div>
-                      </div>
-                      {/* Icon */}
-                      <div className=" w-[40%] h-full m-1  flex items-center justify-end ">
-                        <div className=" w-12 h-12 rounded-lg ">
-                          <ArrowRightIcon className=" w-9 h-9  -rotate-45" />
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </nav>
-            </div>
-            <div className="col-span-3 sm:m-4  ">
-              <div className="grid grid-cols-5 p-4">
-                <div className="col-span-5 flex">
-                  <div className="col-span-3  mr-3 rounded-md">
-                    <img src="/branches.png" alt="branchImage" />
-                  </div>
-                  <div className="col-span-2  rounded-md">
-                    <img src="/branches2.png" alt="branchImage" />
-                  </div>
-                </div>
-                <div className="col-span-5 flex">
-                  <div className="col-span-2  mr-3 rounded-md overflow-hidden">
-                    <img src="/branches3.png" alt="branchImage" />
-                  </div>
-                  <div className="col-span-3 rounded-md overflow-hidden">
-                    <img src="/branches4.png" alt="branchImage" />
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="list-icon p-10 bdd bg-green-100 bg-opacity-50">
+            <h3 className="  text-blue-500">BOX 2</h3>
           </div>
         </div>
       </div>

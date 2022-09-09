@@ -1,19 +1,20 @@
 import React from 'react';
-import Partners from './Partners';
-const collections = [
+import Image from 'next/image';
+
+const projects = [
   {
-    name: 'EFFERANGAN',
-    description: 'Work from home accessories',
-    author: 'LONG CHÂU',
-    imageSrc: '/image.png',
+    name: 'YÊU THƯƠNG TIẾP NỐI',
+    description: 'Music video, Digital Graphic, Marketing',
+    branch: 'ZALOPAY',
+    imageSrc: '/image1.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'ĐIỀU NHỎ BÉ VĨ ĐẠI',
-    description: 'Journals and note-taking',
-    author: 'MOMO',
+    description: 'Visual, Animation, Marketing',
+    branch: 'MOMO',
     imageSrc: '/image2.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
@@ -21,16 +22,16 @@ const collections = [
   },
   {
     name: 'MUỘN MÀNG LÀ TỪ LÚC ',
-    description: 'Daily commute essentials',
-    author: 'MỸ TÂM',
+    description: 'Music video, Digital graphic, Marketing.',
+    branch: 'MỸ TÂM',
     imageSrc: '/image3.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
   {
     name: 'MERRY CHRISTMAS',
-    description: 'Work from home accessories',
-    author: 'VIMCOM CENTER',
+    description: 'Info graphic, Event, Marketing',
+    branch: 'VIMCOM CENTER',
     imageSrc: '/image4.png',
     imageAlt:
       'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
@@ -38,8 +39,8 @@ const collections = [
   },
   {
     name: 'LÁ CỜ',
-    description: 'Journals and note-taking',
-    author: 'BÁO TUỔI TRẺ',
+    description: 'Info graphic, Event, Marketingg',
+    branch: 'BÁO TUỔI TRẺ',
     imageSrc: '/image5.png',
     imageAlt:
       'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
@@ -47,8 +48,8 @@ const collections = [
   },
   {
     name: 'BAO LẦN YÊU CHO VỪA',
-    description: 'Daily commute essentials',
-    author: 'SUZU GROUP',
+    description: 'Info graphic, Event, Marketing',
+    branch: 'SUZU GROUP',
     imageSrc: '/image6.png',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
@@ -57,12 +58,13 @@ const collections = [
 const NewProject = () => {
   return (
     <>
-      <div className="section w-full bg-gray-50  bd">
+      <div className="section w-full bg-gray-50 pt-28  ">
         <div className="w-full">
+          {/* Canh lề trái */}
           {/* Dự án của chúng tôi  */}
-          <div className="mx-4 md:mx-16">
-            <div className="text-left block md:flex">
-              <h2 className="text-red-500 title tracking-tighter leading-relaxed sm:leading-none ">
+          <div className="mx-3  md:mx-16 mb-6 md:mb-14  ">
+            <div className="text-left flex">
+              <h2 className="text-red-500 title  sm:leading-none ">
                 DỰ ÁN &nbsp;
               </h2>
 
@@ -70,18 +72,46 @@ const NewProject = () => {
                 CỦA CHÚNG TÔI
               </h2>
             </div>
-            <div className="  border-b-4 border-red-500 w-full md:border-b-8 md:w-[256px] py-4"></div>
+            <div className="  border-b-4 border-red-500 w-[50%] md:border-b-8 md:w-[160px] py-2 md:py-4"></div>
           </div>
           {/* Ảnh */}
-          <div className="w-full h-[1000px] bdd grid grid-cols-1 md:grid-cols-3 gap-1">
-            <div className="col-span-1 md:col-span-3 flex-col">
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
-              <div className="bd w-full h-80"></div>
+          <div className="PJList justify-around mx-2">
+            {projects.map((item, index) => (
+              <div
+                className="PJ  mb-[var(--spacing)] rounded-lg overflow-hidden"
+                key={index}
+              >
+                <div className="pjimg  relative bg-black  ">
+                  <div className="relative">
+                    <Image
+                      className="PJ-image object-cover opacity-50"
+                      src={item.imageSrc}
+                      alt="image"
+                      width="520px"
+                      height="390px"
+                    ></Image>
+                    {/* <div className=" absolute w-full h-full  bg-gradient-to-b from-white  to-black  opacity-70 bottom-0 left-0 "></div> */}
+                  </div>
+
+                  <div className="PJ-content absolute  bottom-0 left-0 text-white text-left m-4">
+                    <p className="branch font-semibold text-base ">
+                      {item.branch}
+                    </p>
+                    <h3 className="name my-4 font-bold">{item.name}</h3>
+                    <p className="description font-normal text-base">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className="  w-full ">
+              <button
+                className=" w-full md:w-auto border border-red-500 py-2 mt-3 px-7 rounded-md bg-red-500 text-white font-bold
+             hover:bg-red-700 duration-500 "
+              >
+                XEM THÊM &rarr;
+              </button>
             </div>
           </div>
         </div>

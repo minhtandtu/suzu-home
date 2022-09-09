@@ -1,20 +1,21 @@
 import React from 'react';
+import Link from 'next/link';
 const footerNavigation = {
-  solutions: [
+  suzugroup: [
     {name: 'Về chúng tôi', href: '#', id: 1},
     {name: 'Tuyển dụng', href: '#', id: 2},
     {name: 'Blog', href: '#', id: 3},
     {name: 'Trung tâm trợ giúp', href: '#', id: 4},
     {name: 'Liên hệ', href: '#', id: 5},
   ],
-  support: [
+  lienkietnhanh: [
     {name: 'Trang chủ', href: '#', id: 1},
     {name: 'Dự án', href: '#', id: 2},
     {name: 'Dịch vụ', href: '#', id: 3},
     {name: 'Đội ngũ', href: '#', id: 4},
     {name: 'Khách hàng', href: '#', id: 5},
   ],
-  company: [
+  doingucuachungtoi: [
     {name: 'Studio', href: '#', id: 1},
     {name: 'Brand', href: '#', id: 2},
     {name: 'Music', href: '#', id: 3},
@@ -100,91 +101,102 @@ const Contact = [
 const Footer = () => {
   return (
     <>
-      <footer className="bg-white w-full " aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
+      <footer
+        className="bg-white w-full section pb-0 "
+        aria-labelledby="footer-heading"
+      >
         <div>
-          <div className=" w-full max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
-            <div className="   w-full xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-2 xl:col-span-1">
-                <img className="h-16" src="/logo.png" alt="Company name" />
-                {Contact.map((contact) => (
-                  <p key={contact.id} className="text-gray-500 text-base ">
-                    {contact.property} : {contact.content}
-                  </p>
-                ))}
+          <div className=" footer-sections ">
+            {/* <div className="footer-contact space-y-2 xl:col-span-1">
+              <img className="h-16" src="/logo.png" alt="Company name" />
+              {Contact.map((contact) => (
+                <p key={contact.id} className="text-gray-500 text-base ">
+                  {contact.property} : {contact.content}
+                </p>
+              ))}
+            </div> */}
+            <div className="footer-section flex flex-col ">
+              <div className="f-suzu flex flex-col  flex-1 ">
+                <div className="f-title ">
+                  <img className="h-16" src="/logo.png" alt="Company name" />
+                </div>
+                <div className="f-link mt-auto  ">
+                  {Contact.map((contact) => (
+                    <p
+                      key={contact.id}
+                      className="text-gray-500 text-base font-normal mt-4"
+                    >
+                      {contact.property} : {contact.content}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div className="mt-12 grid grid-cols-3 gap-8 xl:mt-0 xl:col-span-2  ">
-                <div className="md:grid md:grid-cols-1 md:gap-8 ">
-                  <div>
-                    <h3 className="text-base font-medium text-gray-900">
-                      SuZu Group
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.solutions.map((item) => (
-                        <li key={item.id}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+            </div>
 
-                <div className="md:grid md:grid-cols-1 md:gap-8 ">
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-base font-medium text-gray-900">
-                      Liên kết nhanh
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.support.map((item) => (
-                        <li key={item.id}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+            <div className="footer-section">
+              <div className="f-suzu">
+                <div className="f-title">
+                  <p className=" "> Suzu Group</p>
+                </div>
+                <div className="f-link">
+                  {footerNavigation.suzugroup.map((item) => (
+                    <>
+                      <Link href="/">
+                        <a className="tag">{item.name}</a>
+                      </Link>
+                    </>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="footer-section">
+              <div className="f-suzu">
+                <div className="f-title">
+                  <p className=" "> Liên kết nhanh </p>
+                </div>
+                <div className="f-link">
+                  <div className="f-link">
+                    {footerNavigation.lienkietnhanh.map((item) => (
+                      <>
+                        <Link href="/">
+                          <a className="tag">{item.name}</a>
+                        </Link>
+                      </>
+                    ))}
                   </div>
                 </div>
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-base font-medium text-gray-900">
-                      Đội ngũ của chúng tôi
-                    </h3>
-                    <ul role="list" className="mt-4 space-y-4">
-                      {footerNavigation.company.map((item) => (
-                        <li key={item.id}>
-                          <a
-                            href={item.href}
-                            className="text-base text-gray-500 hover:text-gray-900"
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+              </div>
+            </div>
+
+            <div className="footer-section">
+              <div className="f-suzu">
+                <div className="f-title">
+                  <p className=" "> Đội ngũ của chúng tôi</p>
+                </div>
+                <div className="f-link">
+                  <div className="f-link">
+                    {footerNavigation.doingucuachungtoi.map((item) => (
+                      <>
+                        <Link href="/">
+                          <a className="tag">{item.name}</a>
+                        </Link>
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className=" w-full mt-12 border-t border-gray-200 py-8 flex justify-between bg-gray-50  ">
-            <div className=" w-full  flex justify-between max-w-md mx-auto  px-4 sm:max-w-7xl sm:px-6  lg:px-8 ">
-              <div className=" ">
-                <p className="text-base text-gray-400 xl:text-center">
+            <div className=" w-full  flex justify-between flex-wrap  mx-auto  px-4 md:px-[var(--commonPadding)]  ">
+              <div className="order-2 md:order-1 ">
+                <p className="text-base text-gray-400 xl:text-center leading-10">
                   &copy; 2022 SuZu Group. All rights reserved.
                 </p>
               </div>
-              <div className=" flex space-x-6 ">
+              <div className=" flex space-x-6 order-1 md:order-2 ">
                 {footerNavigation.social.map((item) => (
                   <a
                     key={item.id}

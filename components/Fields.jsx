@@ -86,7 +86,7 @@ const Fields = () => {
 
         <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
           {linhvuc.map((collection, index) => (
-            <a key={index} href={collection.href} className="group block">
+            <a key={index} href={collection.href} className="group block mb-10">
               <div
                 aria-hidden="true"
                 className=" aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 px-4 md:px-4 lg:aspect-w-5 lg:aspect-h-6 xl:px-16"
@@ -97,12 +97,12 @@ const Fields = () => {
                   className="w-full h-full object-center object-cover"
                 />
               </div>
-              <h3 className="mt-4 semititle text-gray-900">
+              <h3 className="mt-4 semititle text-gray-900 ">
                 {collection.name}
               </h3>
-              <p className="mt-2 description text-gray-500 mb-8">
+              {/* <p className="mt-2 description text-gray-500 mb-8">
                 {collection.description}
-              </p>
+              </p> */}
             </a>
           ))}
         </div>

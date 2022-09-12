@@ -15,14 +15,14 @@ const CustomerLogo = () => {
     <>
       {/* Eclipse Shape + Trước Xuống + Mũi Tên */}
       <div className="section bg-gray-50 rounded-eclipse shadow-biginner -mt-36  ">
-        <div className=" w-full  h-36 flex align-middle justify-center  mt-4">
+        <div className=" w-full  h-36 flex align-middle justify-center md:-mt-14  ">
           <div className=" mx-auto  ">
             <p className="font-normal text-xs ">Trược Xuống</p>
-            <ArrowDownIcon className="arrow  h-10 w-10 text-gray-700  mx-auto " />
+            <ArrowDownIcon className="arrow  h-8 w-8 text-gray-700  mx-auto " />
           </div>
         </div>
         <div className=" block md:hidden ">
-          <div className="mx-auto w-[50%] h-[5px] bg-black rounded-[100px] -mt-20 mb-10 "></div>
+          <div className="mx-auto w-[50%] h-[5px] bg-black rounded-[100px] -mt-8 md:-mt-12 mb-10 "></div>
         </div>
 
         {/* partners logo */}

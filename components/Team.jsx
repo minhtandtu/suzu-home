@@ -122,48 +122,45 @@ const TeamBranches = () => {
 
           {/* Team List and Images */}
 
-          <div className="team-list-images w-full     md:flex">
-            <div className="team-list md:w-[40%]  flex flex-col justify-between   ">
+          <div className="team-list-images w-full flex justify-between">
+            <div className="team-list  flex flex-col justify-between   ">
               {branchName.map((item, index) => (
                 // LIST ITEM----->
-                <div className="list_item  cursor-pointer   " key={index}>
-                  <Link href="/">
-                    <div className="list-content-icon flex justify-between transit  ">
+                <div
+                  className="list_item  cursor-pointer flex items-center justify-between  "
+                  key={index}
+                >
+                  <Link href="/" className=" ">
+                    <div className="list-content-icon flex justify-between ">
                       <div className="list-content   ">
-                        <div>
-                          <p className=" text-3xl leading-9 font-semibold ">
-                            {item.name}
-                          </p>
-                          <p className="item-des ">{item.des}</p>
-                        </div>
-                      </div>
-                      <div>
-                        <div className=" list-icon  flex items-center align-middle   p-2 rounded-md ">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="white"
-                            className="w-6 h-6 -rotate-45"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                            />
-                          </svg>
-                        </div>
+                        <p className="item-title   leading-10 ">{item.name}</p>
+                        <p className="item-des leading-10">{item.des}</p>
                       </div>
                     </div>
                   </Link>
+                  <div className=" list-icon  flex items-center align-middle   p-4  rounded-md  ">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="white"
+                      className="w-6 h-6 -rotate-45"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 // End 0f LIst Item
               ))}
             </div>
             {/*  */}
 
-            <div className="team-images md:w-[60%]  ">
+            <div className="team-images ">
               {/* Image SECTION---> */}
               <div className="col-span-3    ">
                 <div className="grid grid-cols-5">

@@ -75,32 +75,51 @@ const NewProject = () => {
             <div className="  border-b-4 border-red-500 w-[50%] md:border-b-8 md:w-[160px] py-2 md:py-4"></div>
           </div>
           {/* Ảnh */}
-          <div className="PJList justify-around mx-2">
+          <div className="PJList justify-around ">
             {projects.map((item, index) => (
-              <div
-                className="PJ  mb-[var(--spacing)] rounded-lg overflow-hidden"
-                key={index}
-              >
-                <div className="pjimg  relative bg-black  ">
+              <div className="PJ   rounded-lg overflow-hidden" key={index}>
+                <div className="pjimg  relative  ">
                   <div className="relative">
                     <Image
-                      className="PJ-image object-cover opacity-50"
+                      className="PJ-image object-cover   rounded-lg"
                       src={item.imageSrc}
                       alt="image"
-                      width="520px"
-                      height="390px"
+                      width="620px"
+                      height="400px"
                     ></Image>
-                    {/* <div className=" absolute w-full h-full  bg-gradient-to-b from-white  to-black  opacity-70 bottom-0 left-0 "></div> */}
                   </div>
 
-                  <div className="PJ-content absolute  bottom-0 left-0 text-white text-left m-4">
-                    <p className="branch font-semibold text-base ">
-                      {item.branch}
-                    </p>
-                    <h3 className="name my-4 font-bold">{item.name}</h3>
-                    <p className="description font-normal text-base">
-                      {item.description}
-                    </p>
+                  <div
+                    className="absolute  bottom-0 left-0   w-full h-full bg-gradient-to-b from-white to-black 
+                   opacity-20  mb-1 rounded-lg"
+                  ></div>
+
+                  <div className="PJ-content-icon  absolute  bottom-0 left-0    w-full flex justify-between  items-center">
+                    <div className="PJ-content   text-white text-left m-4  ">
+                      <p className="branch font-semibold text-base ">
+                        {item.branch}
+                      </p>
+                      <h3 className="name my-4 font-bold">{item.name}</h3>
+                      <p className="description font-normal text-base">
+                        {item.description}
+                      </p>
+                    </div>
+                    <div className=" PJ-icon hidden   ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="white"
+                        className="w-6 h-6 -rotate-45"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>

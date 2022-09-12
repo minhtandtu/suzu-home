@@ -42,7 +42,7 @@
     @apply border border-gray-400;
   }
   .bdd {
-    @apply border border-red-400;
+    @apply border-2 border-red-400;
   }
 
   .PJList {
@@ -61,11 +61,20 @@
   .PJ-image {
     opacity: 1;
   }
+  .PJ-icon {
+    color: transparent;
+    display: none;
+  }
+  .pjimg:hover .PJ-icon {
+    @apply bg-red-500 transition duration-500 text-white flex justify-center  p-4 m-4 h-16 w-16 rounded-md;
+  }
+
   @media screen and (max-width: 768px) {
     .PJList {
       --columns: 1;
     }
   }
+
   .arrow {
     position: relative;
     animation: arrows-animation 2s infinite;
@@ -213,10 +222,7 @@
     --itemNum: 5;
     --list_space: 20px;
   }
-  .list-content-icon:hover .list-icon {
-    background-color: red;
-    color: white;
-  }
+
   .list-content-icon:hover {
     color: red;
     transition-property: color, background-color, border-color,
@@ -233,7 +239,6 @@
   .list_item {
     box-sizing: border-box;
     /* Auto layout */
-
     padding: 12px 16px;
     /* Gray warm / 50 */
     background: #fafaf9;
@@ -245,8 +250,14 @@
       0px 4px 6px -2px rgba(16, 24, 40, 0.03);
     margin-right: 48px;
   }
+  .list_item:hover .list-icon {
+    background-color: red;
+    color: white;
+  }
+
   .team-list {
     color: #44403c;
+    flex: 1;
   }
   .list_item:hover {
     background: white;
@@ -260,6 +271,7 @@
     /* identical to box height, or 127% */
     /* Gray warm / 700 */
     color: #44403c;
+    shrink: 0;
   }
   .item-des {
     font-weight: 400;
@@ -269,12 +281,19 @@
     /* Gray warm / 700 */
     color: #44403c;
   }
-
-  @media screen and (max-width: 767px) {
+  .team-images {
+    width: 60%;
+    @apply justify-end;
+  }
+  @media screen and (max-width: 1024px) {
+    .team-list-images {
+      @apply flex flex-col;
+    }
     .list_item {
-      margin-right: 0px;
+      margin-right: 3px;
       margin-bottom: var(--list_space);
     }
+
     .item-title {
       font-style: normal;
       font-weight: 600;
@@ -287,7 +306,12 @@
       font-size: 12px;
       line-height: 18px;
     }
+    .team-images {
+      width: 100%;
+      @apply w-full;
+    }
   }
+
   .box-container:hover .list-icon {
     background-color: red;
   }

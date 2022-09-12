@@ -1,31 +1,31 @@
 import React from 'react';
+import '@splidejs/react-splide/css/sea-green';
+import {Splide, SplideSlide} from '@splidejs/react-splide';
 const works = [
   {
-    title: 'TITLE',
+    title: 'Xây dựng thương hiệu',
     description:
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy',
+      ' Chúng tôi là chuyên gia xây dựng hình ảnh phù hợp cho doanh nghiệp của bạn để đảm bảo khách hàng tiềm năng chọn bạn hơn đối thủ cạnh tranh.',
     author: 'LONG CHÂU',
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg',
-    imageAlt:
-      'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
+    imageAlt: ' Photo',
     href: '#',
   },
   {
-    title: 'TITLE',
+    title: 'Thiết kế đồ họa',
     description:
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for  will uncover many web sites still in their infancy',
+      'Chúng tôi có thể giúp củng cố thương hiệu của bạn bằng việc xây dựng cộng đồng hoặc thiết kế các tài liệu tiếp thị để mang lại ấn tượng lâu dài với khách hàng. ',
     author: 'MOMO',
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg',
-    imageAlt:
-      'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
+    imageAlt: 'Photo',
     href: '#',
   },
   {
-    title: 'TITLE',
+    title: 'Truyền thông xã hội',
     description:
-      'Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy',
+      ' Chúng tôi có thể quảng bá thương hiệu của bạn để kết nối với khách hàng tiềm năng bằng nhiều hình thức truyền thông kỹ thuật số.',
     author: 'MỸ TÂM',
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
@@ -33,36 +33,41 @@ const works = [
     href: '#',
   },
 ];
-const categories = [
+const projects = [
   {
     name: 'New Arrivals',
     href: '#',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg',
+    imageSrc: 'image.png',
   },
   {
     name: 'Productivity',
     href: '#',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg',
+    imageSrc: 'image1.png',
   },
   {
     name: 'Workspace',
     href: '#',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg',
+    imageSrc: 'image2.png',
   },
   {
     name: 'Accessories',
     href: '#',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg',
+    imageSrc: 'image3.png',
   },
   {
     name: 'Sale',
     href: '#',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg',
+    imageSrc: 'image4.png',
+  },
+  {
+    name: 'Sale2',
+    href: '#',
+    imageSrc: 'image5.png',
+  },
+  {
+    name: 'Sale3',
+    href: '#',
+    imageSrc: 'image2.png',
   },
 ];
 const Works = () => {
@@ -90,28 +95,23 @@ const Works = () => {
           {/*  */}
 
           <div className="w-full mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-            {works.map((collection) => (
-              <a
-                key={collection.title}
-                href={collection.href}
-                className="group block   w-full "
-              >
+            {works.map((item, index) => (
+              <a key={index} href={item.href} className="group block   w-full ">
                 <div
-                  aria-hidden="true"
                   className="  aspect-w-3 aspect-h-2 rounded-lg overflow-hidden 
                   group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                 >
                   <img
-                    src={collection.imageSrc}
-                    alt={collection.imageAlt}
+                    src={item.imageSrc}
+                    alt={item.imageAlt}
                     className=" w-72 h-96 object-center object-cover  mx-auto"
                   />
                 </div>
                 <h3 className="mt-4 semititle text-gray-900 text-center">
-                  {collection.title}
+                  {item.title}
                 </h3>
                 <p className="mt-2 description text-gray-500 text-center ">
-                  {collection.description}
+                  {item.description}
                 </p>
               </a>
             ))}
@@ -122,32 +122,64 @@ const Works = () => {
           aria-labelledby="category-heading"
           className="pt-4 sm:pt-4 xl:max-w-7xl xl:mx-auto xl:px-8"
         >
-          <div className=" flow-root">
-            <div className="">
-              <div className="box-content  relative h-80 overflow-x-auto xl:overflow-visible">
-                <div className="absolute grid-cols-2 min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
-                  {categories.map((category) => (
-                    <a
-                      key={category.name}
-                      href={category.href}
-                      className="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto"
-                    >
-                      <span aria-hidden="true" className="absolute inset-0">
-                        <img
-                          src={category.imageSrc}
-                          alt=""
-                          className="w-56 h-56 object-center object-cover shadow-md shadow-gray-400"
-                        />
-                      </span>
-
-                      {/* <span className="relative mt-auto text-center text-xl font-bold text-black">
-                            {category.name}
-                          </span> */}
-                    </a>
-                  ))}
-                </div>
+          {/* <div className=" flow-root">
+            <div className="box-content  relative h-80 overflow-x-auto xl:overflow-visible">
+              <div className="absolute grid-cols-2 min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
+                {categories.map((category) => (
+                  <a
+                    key={category.name}
+                    href={category.href}
+                    className="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto"
+                  >
+                    <span aria-hidden="true" className="absolute inset-0">
+                      <img
+                        src={category.imageSrc}
+                        alt=""
+                        className="w-56 h-56 object-center object-cover shadow-md shadow-gray-400"
+                      />
+                    </span>
+                  </a>
+                ))}
               </div>
             </div>
+          </div> */}
+          <div className="mini-slider   w-full h-80 ">
+            <Splide
+              options={{
+                type: 'loop',
+                perPage: 4,
+                perMove: 1,
+                hasTrack: false,
+                pagination: false,
+                breakpoints: {
+                  1024: {
+                    perPage: 3,
+                  },
+                  768: {
+                    perPage: 1,
+                  },
+                },
+              }}
+              aria-label="My Favorite Images"
+            >
+              {projects.map((item, index) => (
+                <SplideSlide key={index}>
+                  <a
+                    key={index}
+                    href={item.href}
+                    className="relative  h-60 rounded-lg  p-6 flex justify-center overflow-hidden hover:opacity-75 xl:w-auto   "
+                  >
+                    <span aria-hidden="true" className="absolute inset-0">
+                      <img
+                        src={item.imageSrc}
+                        alt=""
+                        className="w-56 h-56 object-center object-cover shadow-md shadow-gray-400 mx-auto rounded-lg"
+                      />
+                    </span>
+                  </a>
+                </SplideSlide>
+              ))}
+            </Splide>
           </div>
         </section>
       </div>

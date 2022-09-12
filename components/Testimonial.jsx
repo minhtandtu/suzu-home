@@ -64,8 +64,8 @@ const Testimonial = () => {
                 aria-label="My Favorite Images"
               >
                 {testimonial.map((item, index) => (
-                  <SplideSlide>
-                    <div key={index} className="testimonial-content     ">
+                  <SplideSlide key={index}>
+                    <div className="testimonial-content     ">
                       <div className="comment-content flex-1">
                         {item.comment}
                       </div>
